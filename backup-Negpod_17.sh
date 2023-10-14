@@ -9,5 +9,6 @@ remote_location="/summative/0923-2023S"
 
 directory="backup_dir"
 
+
 scp -r $directory $remote_username@$remote_host:$remote_location
 echo "Backup done successfully"
