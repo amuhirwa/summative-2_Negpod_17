@@ -1,6 +1,7 @@
 #!/bin/bash
 #creating directory and move four files automatically
-mkdir -p negpod_id-ql
+mkdir -p negpod_id-qli
+#move the files`
 mv main.sh negpod-id-ql/
 mv Students-list_0923.txt negpod_id-ql/
 mv Select-emails.sh negpod_id-ql/
