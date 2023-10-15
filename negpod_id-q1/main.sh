@@ -1,3 +1,5 @@
+<<<<<<< HEAD
+=======
 #!/usr/bin/env bash
 # Application that registers students' details into the ALU registration system.
 
@@ -21,6 +23,20 @@ view_recs() {
 	fi
 	}
 # !!!! ADD OTHER FUNCTIONS HERE
+delete() {
+        read -rp "Which student would you like to delete?(Enter student ID) : " delete_id
+        sed -i "/Student ID: $delete_id/d" "students-list_0923.txt"
+}
+
+update() {
+        read -rp "Which student would you like to update?(Enter student ID) : " update_id
+        read -rp "Enter new email : " new_email
+        read -rp "Enter new age : " new_age
+        sed -i "s/Student ID: $update_id .*/Student ID: $update_id \tStudent email: $new_email \tStudent age: $new_age/" "students-list_0923.txt"
+}
+exit_app(){
+        exit
+}
 
 # Main part
 while :
@@ -33,6 +49,13 @@ do
 		output) output_to_file ;;
 		view) view_recs;;
 		# !!!! ADD OTHER FUNCTIONS HERE
+		delete) delete ;;
+		update) update ;;
+		exit) exit_app ;;
+
+	
+
 		*) echo "Usage: main.sh {create|output|view|delete|update|exit}" 
 	esac
 done
+>>>>>>> cd00454 (script updated)
