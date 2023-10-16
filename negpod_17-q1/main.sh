@@ -26,7 +26,7 @@ view_recs() {
 		echo "No students saved yet"
 	fi
 	}
-# !!!! ADD OTHER FUNCTIONS HERE
+# Function to delete student record using student id
 delete() {
         read -rp "Which student would you like to delete?(Enter student ID) : " delete_id
 	if (( $(grep -cP "Student ID: $delete_id[^[[:digit:]]]*" < "students-list_0923.txt") >= 1))
@@ -37,7 +37,7 @@ delete() {
 		echo "Student with student ID: $delete_id not found for deletion"
 	fi
 	}
-
+# Function to update student record using student id 
 update() {
         read -rp "Which student would you like to update?(Enter student ID) : " update_id
 	if (( $(grep -cP "Student ID: $update_id[^[[:digit:]]]*" < "students-list_0923.txt") >= 1))
@@ -51,6 +51,7 @@ update() {
 
 	fi
 }
+# Function to exit application
 exit_app(){
         exit
 }
@@ -65,7 +66,6 @@ do
 		create) create_rec ;;
 		output) output_to_file ;;
 		view) view_recs;;
-		# !!!! ADD OTHER FUNCTIONS HERE
 		delete) delete ;;
 		update) update ;;
 		exit) exit_app ;;
