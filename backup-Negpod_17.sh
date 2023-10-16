@@ -9,6 +9,5 @@ remote_location="/summative/0923-2023S"
 
 directory="negpod_17-q1"
 
-
 scp -r $directory $remote_username@$remote_host:$remote_location
 echo "Backup done successfully"
