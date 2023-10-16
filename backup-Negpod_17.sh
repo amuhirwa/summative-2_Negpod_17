@@ -1,5 +1,5 @@
 #!/bin/bash
-
+# Script to backup to remote server
 #remote server details
 
 remote_host="2f05c1f8800b.3be8ebfc.alu-cod.online"
