@@ -7,7 +7,7 @@ if [ ! -d "$destination_dir" ]; then
   mkdir "$destination_dir"
 fi
 
-files_to_move=("main.sh" "students-list_0923.txt" "Select-emails.sh" "student-emails.txt")
+files_to_move=("main.sh" "students-list_0923.txt" "select-emails.sh" "student-emails.txt")
 
 for file in "${files_to_move[@]}"; do
   if [ -e "$file" ]; then
