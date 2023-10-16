@@ -1,7 +1,7 @@
 #!/bin/bash
 #shell script to automatically move the all specified files to the "negpod_id-q1" directory.
 
-destination_dir="negpod_id-q1"
+destination_dir="negpod_17-q1"
 
 if [ ! -d "$destination_dir" ]; then
   mkdir "$destination_dir"
